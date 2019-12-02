@@ -1,0 +1,130 @@
+@font-face {
+  font-family: 'Didot Medium';
+  src: url('../fonts/DidotHTF-06Medium.woff') format('woff');
+}
+@font-face {
+  font-family: 'Didot Light';
+  src: url('../fonts/DidotHTF-16Light.woff') format('woff');
+}
+
+.docpdf {
+  box-shadow: 0 30px 40px 0 rgba(0, 0, 0, 0.25);
+}
+
+.pagepdf {
+  max-width: 612px;
+  width: 90vw;
+}
+.react-pdf__Page__svg {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+.react-pdf__Page__svg svg {
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+  display: block;
+  background-color: white;
+}
+.react-pdf__message {
+  background: linear-gradient(
+    125.75deg,
+    white 0%,
+    #dee4f0 33%,
+    white 66%,
+    #dee4f0 100%
+  );
+  background-size: 200% 100%;
+  animation-name: loading-animate;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  border-radius: 8px;
+  max-width: 612px;
+  width: 90vw;
+  padding-bottom: 141.453%;
+  font-size: 0;
+}
+@keyframes loading-animate {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: 00%;
+  }
+}
+.react-pdf__message_mobile {
+  background: linear-gradient(
+    125.75deg,
+    white 0%,
+    #dee4f0 33%,
+    white 66%,
+    #dee4f0 100%
+  );
+  transform: scale(0.9);
+  width: 300px;
+  background-size: 200% 100%;
+  animation-name: loading-animate;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  border-radius: 8px;
+
+  font-size: 0;
+}
+@keyframes loading-animate {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: 00%;
+  }
+}
+
+.tab-list {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  list-style: none;
+  margin-left: 0;
+  margin-bottom: 0;
+}
+@media (max-width: 600px) {
+  .tab-list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+}
+
+.tab {
+  background-color: white;
+  margin-bottom: 0;
+  padding: 1em;
+  border: 2px #1e1e1e solid;
+  text-align: center;
+  cursor: pointer;
+  font-family: 'didot';
+  font-weight: 300;
+  text-transform: uppercase;
+}
+@media (min-width: 650px) {
+  .tab:hover {
+    background-color: darkgray;
+  }
+}
+.tab:active {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.tab-open {
+  background-color: #1e1e1e;
+  color: white;
+}
+a.maplink {
+  transition: all 0.5s ease;
+}
+a.maplink:hover .mapcontainer {
+  transform: translateY(0.33em);
+}

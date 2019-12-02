@@ -1,0 +1,59 @@
+.logo {
+  margin-bottom: 0;
+}
+.secondul {
+  position: absolute;
+  visibility: hidden;
+  list-style: none;
+  background-color: rgba(255, 255, 255, 0.75);
+  opacity: 0;
+  transition: visibility 350ms ease-in forward 0.5s,
+    opacity 35ms ease-in forward;
+}
+.firstli:hover > .secondul {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0;
+}
+.menutrue {
+  animation: movedown 300ms;
+  display: block;
+  z-index: 160;
+}
+.menufalse {
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+.animate-pulse {
+  animation: animate-pulse 300ms;
+}
+@keyframes movedown {
+  0% {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes moveup {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes animate-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.33);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
