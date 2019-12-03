@@ -7,7 +7,7 @@ module.exports = {
   headline: 'Café Black in Zürich', // Headline for schema.org JSONLD
   url: 'https://black1966.ch', // Domain of your site. No trailing slash!
   siteLanguage: 'de', // Language Tag on <html> element
-  logo: '/logos/logo-1024.png', // Used for SEO
+  logo: '/logos/banner.png', // Used for SEO
   ogLanguage: 'en_US', // Facebook Language
 
   // JSONLD / Manifest
