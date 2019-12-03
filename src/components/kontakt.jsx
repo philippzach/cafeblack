@@ -66,9 +66,27 @@ const Kontakt = ({ data }) => (
           <Span>{data.tage.text}</Span>
           <Span>{data.zeit.text}</Span>
           <div />
-          <Social href='https://facebook.com/cafeblack1966'>Facebook</Social>
-          <Social href='https://instagram.com/cafeblack1966'>Instagram</Social>
-          <Social href='https://black1966.eventbrite.com'>Events</Social>
+          <Social
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://facebook.com/cafeblack1966'
+          >
+            Facebook
+          </Social>
+          <Social
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://instagram.com/cafeblack1966'
+          >
+            Instagram
+          </Social>
+          <Social
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://black1966.eventbrite.com'
+          >
+            Events
+          </Social>
         </div>
         <div>
           <Paragraph>Kontakt</Paragraph>
@@ -80,8 +98,6 @@ const Kontakt = ({ data }) => (
           <CustomLink href={`tel:${data.phone.text}`}>
             <Span>{data.phone.text}</Span>
           </CustomLink>
-          {/*           <Button link={`mailto:${data.email.text}`} text={data.email.text} />
-          <Button link={`tel:${data.phone.text}`} text={data.phone.text} /> */}
         </div>
       </Grid>
     </Wrapper>

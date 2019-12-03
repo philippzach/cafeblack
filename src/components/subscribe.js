@@ -10,7 +10,7 @@ const Background = styled.div`
 `
 const Top = styled.h3`
   padding-top: 3em;
-  font-size: 2.2em;
+  font-size: 1.2em;
   padding-left: 15px;
   font-family: didot;
 `
@@ -78,12 +78,10 @@ const CustomForm = ({ status, message, onValidated }) => {
 
   return (
     <div>
-      {status === 'sending' && <div style={{ color: 'blue', paddingRight: '15px' }}>Senden...</div>}
-      {status === 'error' && (
-        <div style={{ color: 'red', paddingRight: '15px' }}>Bitte versuche es später nochmals</div>
-      )}
+      {status === 'sending' && <div style={{ color: 'blue', paddingLeft: '15px' }}>Senden...</div>}
+      {status === 'error' && <div style={{ color: 'red', paddingLeft: '15px' }}>Bitte versuche es später nochmals</div>}
       {status === 'success' && (
-        <div style={{ color: 'green', paddingRight: '15px' }}>Erfolg! Vielen Dank fürs abonnieren</div>
+        <div style={{ color: 'green', paddingLeft: '15px' }}>Erfolg! Vielen Dank fürs abonnieren</div>
       )}
       <Form>
         <InputField ref={node => (name = node)} type="text" placeholder="Name" />
@@ -104,8 +102,8 @@ class Demo extends Component {
     return (
       <Background>
         <Container>
-          <Top>Bleibe auf immer dem laufenden!</Top>
-          <Bottom>Erhalte Neuigkeiten und Promos</Bottom>
+          <Top>Bleibe immer auf dem Laufenden!</Top>
+          <Bottom>Erhalte Neuigkeiten und Einladungen zu Events</Bottom>
           <div>
             <MailchimpSubscribe
               url={url}
