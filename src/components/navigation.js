@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import styled from '@emotion/styled';
-import Logo from './images/nav-logo.svg';
-import './navigation.css';
+import React, { Component } from 'react'
+import styled from '@emotion/styled'
+import Logo from './images/nav-logo.svg'
+import './navigation.css'
 
 const Absolute = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
   z-index: 100;
-`;
+`
 
 const Bar = styled.nav`
   margin-right: auto; /* 1 */
@@ -30,7 +30,7 @@ const Bar = styled.nav`
         color: white;
         text-decoration: none;
         text-transform: uppercase;
-        font-family: "Didot Medium" !important;
+        font-family: "Didot Medium", "sans-serif";
         font-style: normal;
         font-weight: 300;
         text-shadow: black 1px 1px 10px;
@@ -59,7 +59,7 @@ const Bar = styled.nav`
       display: none;
     } */
   }
-`;
+`
 const Button = styled.a`
   button {
     background-color: white;
@@ -77,29 +77,29 @@ const Button = styled.a`
     color: white;
     background-color: black;
   }
-`;
+`
 
 const NavigationDesk = () => (
   <Absolute>
     <Bar>
-      <img className='desktopLogo' src={Logo} width='25%' />
+      <img className="desktopLogo" src={Logo} width="25%" />
       <ul>
         <li>
-          <a href='#karte'>Karte</a>
+          <a href="#karte">Karte</a>
         </li>
         <li>
-          <a href='#about'>Über uns</a>
+          <a href="#about">Über uns</a>
         </li>
 
         <li>
-          <a href='#events'>Events</a>
+          <a href="#events">Events</a>
         </li>
       </ul>
-      <Button href='#kontakt'>
+      <Button href="#kontakt">
         <button>Kontaktiere Uns</button>
       </Button>
     </Bar>
   </Absolute>
-);
+)
 
-export default NavigationDesk;
+export default NavigationDesk

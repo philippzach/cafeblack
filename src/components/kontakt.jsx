@@ -36,6 +36,20 @@ const CustomLink = styled.a`
     color: black;
   }
 `;
+const Social = styled.a`
+  display: block;
+  font-family: 'didot';
+  font-weight: 800;
+  font-style: normal;
+  color: rgb(28, 37, 43);
+  font-size: 1em;
+  text-decoration: underline;
+  :hover {
+    text-decoration: none;
+    color: black;
+  }
+`;
+
 const Kontakt = ({ data }) => (
   <Container>
     <Wrapper>
@@ -51,6 +65,10 @@ const Kontakt = ({ data }) => (
           <Paragraph>Öffnungszeiten</Paragraph>
           <Span>{data.tage.text}</Span>
           <Span>{data.zeit.text}</Span>
+          <div />
+          <Social href='https://facebook.com/cafeblack1966'>Facebook</Social>
+          <Social href='https://instagram.com/cafeblack1966'>Instagram</Social>
+          <Social href='https://black1966.eventbrite.com'>Events</Social>
         </div>
         <div>
           <Paragraph>Kontakt</Paragraph>
