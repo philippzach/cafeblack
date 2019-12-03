@@ -20,6 +20,7 @@ module.exports = {
   twitter: '@cafeblack1966', // Twitter Username
   facebook: 'cafeblack1966', // Facebook Site Name
   googleAnalyticsID: 'UA-153854830-1',
+  fbPixelID: '535270397055819',
 
-  skipNavId: 'reach-skip-nav', // ID for the "Skip to content" a11y feature
-}
+  skipNavId: 'reach-skip-nav' // ID for the "Skip to content" a11y feature
+};
