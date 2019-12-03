@@ -33,8 +33,7 @@ class SimpleSlider extends React.Component {
           items={this.state.galleryItems}
           responsive={this.responsive}
           dotsDisabled
-          autoPlayInterval={2000}
-          autoPlayDirection="rtl"
+          autoPlayInterval={1500}
           autoPlay
           fadeOutAnimation
           mouseTrackingEnabled

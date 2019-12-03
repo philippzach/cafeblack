@@ -83,9 +83,9 @@ const Kontakt = ({ data }) => (
           <Social
             target='_blank'
             rel='noopener noreferrer'
-            href='https://black1966.eventbrite.com'
+            href=' https://www.tripadvisor.com/Restaurant_Review-g188113-d4149013-Reviews-Cafe_Black_Wine_Art_Gallery-Zurich.html?m=19905'
           >
-            Events
+            Tripadvisor
           </Social>
         </div>
         <div>
