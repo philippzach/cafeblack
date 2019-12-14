@@ -1,7 +1,8 @@
-import React from 'react';
-import styled from '@emotion/styled';
-import Wrapper from './Wrapper';
-import Button from './button';
+import React from 'react'
+import styled from '@emotion/styled'
+import Wrapper from './Wrapper'
+import Button from './button'
+import Background from './images/kontaktbg.jpg'
 
 const Grid = styled.div`
   display: grid;
@@ -11,20 +12,22 @@ const Grid = styled.div`
   div {
     margin-top: 3.5em;
   }
-`;
+`
 const Paragraph = styled.p`
   font-family: 'didot';
   text-transform: uppercase;
   font-size: 1.1em;
   font-weight: 700;
-`;
+`
 const Span = styled.span`
   display: block;
   font-family: 'didot';
-`;
+`
 const Container = styled.div`
-  margin-bottom: 8em;
-`;
+  /* margin-bottom: 8em; */
+  background-image: url(${Background});
+  background-repeat: no-repeat;
+`
 const CustomLink = styled.a`
   color: rgb(28, 37, 43);
   font-family: 'didot';
@@ -35,7 +38,7 @@ const CustomLink = styled.a`
     text-decoration: none;
     color: black;
   }
-`;
+`
 const Social = styled.a`
   display: block;
   font-family: 'didot';
@@ -48,7 +51,7 @@ const Social = styled.a`
     text-decoration: none;
     color: black;
   }
-`;
+`
 
 const Kontakt = ({ data }) => (
   <Container>
@@ -65,35 +68,30 @@ const Kontakt = ({ data }) => (
           <Paragraph>Öffnungszeiten</Paragraph>
           <Span>{data.tage.text}</Span>
           <Span>{data.zeit.text}</Span>
+          <Span>{data.dateextra.text}</Span>
+          <Span>{data.timeextra.text}</Span>
           <div />
-          <Social
-            target='_blank'
-            rel='noopener noreferrer'
-            href='https://facebook.com/cafeblack1966'
-          >
+          <Social target="_blank" rel="noopener noreferrer" href="https://facebook.com/cafeblack1966">
             Facebook
           </Social>
-          <Social
-            target='_blank'
-            rel='noopener noreferrer'
-            href='https://instagram.com/cafeblack1966'
-          >
+          <Social target="_blank" rel="noopener noreferrer" href="https://instagram.com/cafeblack1966">
             Instagram
           </Social>
           <Social
-            target='_blank'
-            rel='noopener noreferrer'
-            href=' https://www.tripadvisor.com/Restaurant_Review-g188113-d4149013-Reviews-Cafe_Black_Wine_Art_Gallery-Zurich.html?m=19905'
+            target="_blank"
+            rel="noopener noreferrer"
+            href=" https://www.tripadvisor.com/Restaurant_Review-g188113-d4149013-Reviews-Cafe_Black_Wine_Art_Gallery-Zurich.html?m=19905"
           >
             Tripadvisor
+          </Social>
+          <Social target="_blank" rel="noopener noreferrer" href=" https://linkedin.com/company/cafe-bar-black1966">
+            LinkedIn
           </Social>
         </div>
         <div>
           <Paragraph>Kontakt</Paragraph>
           <CustomLink href={`mailto:${data.email.text}`}>
-            <Span style={{ textDecoration: 'underline' }}>
-              {data.email.text}
-            </Span>
+            <Span style={{ textDecoration: 'underline' }}>{data.email.text}</Span>
           </CustomLink>
           <CustomLink href={`tel:${data.phone.text}`}>
             <Span>{data.phone.text}</Span>
@@ -102,6 +100,6 @@ const Kontakt = ({ data }) => (
       </Grid>
     </Wrapper>
   </Container>
-);
+)
 
-export default Kontakt;
+export default Kontakt

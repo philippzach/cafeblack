@@ -54,12 +54,12 @@ const KartenMobile = ({ data, kartenText }) => (
           <Tab className="tab" selectedClassName="tab-open">
             {data.karte6text.text}
           </Tab>
-          <Tab className="tab" selectedClassName="tab-open">
+          {/*  <Tab className="tab" selectedClassName="tab-open">
             {data.karte7text.text}
           </Tab>
           <Tab className="tab" selectedClassName="tab-open">
             {data.karte8text.text}
-          </Tab>
+          </Tab> */}
         </TabList>
         <Spacer />
       </Wrapper>
@@ -69,7 +69,7 @@ const KartenMobile = ({ data, kartenText }) => (
             className="docpdf_mobile"
             file={data.karte1pdf.url}
             loading={<div className="react-pdf__message_mobile" />}
-            renderMode="svg"
+            renderMode="png"
           >
             <Page width="340" className="pagepdf_mobile" pageNumber={1} />
           </Document>
@@ -86,7 +86,7 @@ const KartenMobile = ({ data, kartenText }) => (
             className="docpdf_mobile"
             file={data.karte2pdf.url}
             loading={<div className="react-pdf__message_mobile" />}
-            renderMode="svg"
+            renderMode="png"
           >
             <Page width="340" className="pagepdf_mobile" pageNumber={1} />
           </Document>
@@ -103,7 +103,7 @@ const KartenMobile = ({ data, kartenText }) => (
             className="docpdf_mobile"
             file={data.karte3pdf.url}
             loading={<div className="react-pdf__message_mobile" />}
-            renderMode="svg"
+            renderMode="png"
           >
             <Page width="340" className="pagepdf_mobile" pageNumber={1} />
           </Document>
@@ -120,7 +120,7 @@ const KartenMobile = ({ data, kartenText }) => (
             className="docpdf_mobile"
             file={data.karte4pdf.url}
             loading={<div className="react-pdf__message_mobile" />}
-            renderMode="svg"
+            renderMode="png"
           >
             <Page width="340" className="pagepdf_mobile" pageNumber={1} />
           </Document>
@@ -137,7 +137,7 @@ const KartenMobile = ({ data, kartenText }) => (
             className="docpdf_mobile"
             file={data.karte5pdf.url}
             loading={<div className="react-pdf__message_mobile" />}
-            renderMode="svg"
+            renderMode="png"
           >
             <Page width="340" className="pagepdf_mobile" pageNumber={1} />
           </Document>
@@ -154,7 +154,7 @@ const KartenMobile = ({ data, kartenText }) => (
             className="docpdf_mobile"
             file={data.karte6pdf.url}
             loading={<div className="react-pdf__message_mobile" />}
-            renderMode="svg"
+            renderMode="png"
           >
             <Page width="340" className="pagepdf_mobile" pageNumber={1} />
           </Document>
@@ -165,7 +165,7 @@ const KartenMobile = ({ data, kartenText }) => (
           </DownloadLink>
         </LinkContainer>
       </TabPanel>
-      <TabPanel>
+      {/*       <Document>
         <DocWrapper>
           <Document
             className="docpdf_mobile"
@@ -181,7 +181,7 @@ const KartenMobile = ({ data, kartenText }) => (
             {data.ctadownload.text}
           </DownloadLink>
         </LinkContainer>
-      </TabPanel>
+      </Document>
       <TabPanel>
         <DocWrapper>
           <Document
@@ -198,7 +198,7 @@ const KartenMobile = ({ data, kartenText }) => (
             {data.ctadownload.text}
           </DownloadLink>
         </LinkContainer>
-      </TabPanel>
+      </TabPanel> */}
       <Spacer />
     </Tabs>
   </Karten>

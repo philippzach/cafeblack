@@ -40,7 +40,9 @@ class Footer extends Component {
         <Background>
           <a
             className="maplink"
-            href="https://www.google.com/maps/place/Cafe+Black/@47.3622898,8.5374162,14z/data=!4m5!3m4!1s0x0:0xa3fcc7f226975c6f!8m2!3d47.3617368!4d8.5485268"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.google.com/maps/place/Cafe+Bar+Black+1966/@47.361645,8.5488245,15z/data=!4m5!3m4!1s0x0:0x15abce2e0a4b80f6!8m2!3d47.361645!4d8.5488245"
           >
             <MapContainer>
               <DesktopMap className="mapcontainer" src={DesktopMapS} alt="cafe black 1966 zurich map" />

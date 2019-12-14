@@ -270,14 +270,17 @@ class Index extends Component {
                 </svg>
               </GridOne>
               <GridTwo>
-                <h2 className='plusafter'>{kontakt.data.title.text}</h2>
+                {/* <h2 className="plusafter">{kontakt.data.title.text}</h2>
                 <h2>{kontakt.data.strasse.text}</h2>
-                <h2>{kontakt.data.plz.text}</h2>
+                <h2>{kontakt.data.plz.text}</h2> */}
               </GridTwo>
               <GridThree>
                 <h2>Öffnungszeiten</h2>
                 <h2>
                   {kontakt.data.tage.text} | {kontakt.data.zeit.text}
+                </h2>
+                <h2>
+                  {kontakt.data.dateextra.text} | {kontakt.data.timeextra.text}
                 </h2>
               </GridThree>
               <GridFour>
@@ -384,18 +387,6 @@ export const pageQuery = graphql`
         karte6pdf {
           url
         }
-        karte7text {
-          text
-        }
-        karte7pdf {
-          url
-        }
-        karte8text {
-          text
-        }
-        karte8pdf {
-          url
-        }
       }
     }
     texts: prismicTopText {
@@ -499,6 +490,12 @@ export const pageQuery = graphql`
           text
         }
         zeit {
+          text
+        }
+        dateextra {
+          text
+        }
+        timeextra {
           text
         }
       }

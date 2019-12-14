@@ -61,21 +61,14 @@ const Bar = styled.nav`
   }
 `
 const Button = styled.a`
-  button {
-    background-color: white;
-    padding: 0.5em;
-    color: black;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-family: 'Didot Medium' !important;
-    font-style: normal;
-    font-weight: 300;
-    border: solid 1px black;
-    cursor: pointer;
-  }
-  button:hover {
-    color: white;
-    background-color: black;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Didot Medium', 'sans-serif';
+  font-style: normal;
+  font-weight: 300;
+  text-shadow: black 1px 1px 10px;
+  :hover {
   }
 `
 
@@ -94,10 +87,11 @@ const NavigationDesk = () => (
         <li>
           <a href="#events">Events</a>
         </li>
+        <li>
+          <a href="#kontakt">Kontakt</a>
+        </li>
       </ul>
-      <Button href="#kontakt">
-        <button>Kontaktiere Uns</button>
-      </Button>
+      {/*  <Button href="#kontakt">Kontakt</Button> */}
     </Bar>
   </Absolute>
 )

@@ -89,7 +89,7 @@ const CustomForm = ({ status, message, onValidated }) => {
         <InputField ref={node => (email = node)} type="email" placeholder="Email Addresse" />
         <br />
         <Button id="cta-subscribe-submit" onClick={submit} className="button-blue">
-          Abonnieren
+          Senden
         </Button>
       </Form>
     </div>
@@ -102,8 +102,8 @@ class Demo extends Component {
     return (
       <Background>
         <Container>
-          <Top>Bleibe immer auf dem Laufenden!</Top>
-          <Bottom>Erhalte Neuigkeiten und Einladungen zu Events</Bottom>
+          <Top>Bleiben Sie informiert!</Top>
+          {/* <Bottom>Erhalte Neuigkeiten und Einladungen zu Events</Bottom> */}
           <div>
             <MailchimpSubscribe
               url={url}
