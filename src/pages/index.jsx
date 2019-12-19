@@ -212,9 +212,9 @@ class Index extends Component {
               </GridOne>
               <GridTwo>
                 <h2>
-                  Von 25.12.19 bis 05.01.19 Weihnachtsferien
+                  Von 25.12.19 bis 05.01.20 Weihnachtsferien
                   <br />
-                  Wir wünschen Ihnen frohe Feiertage!
+                  Wir wünschen Ihnen frohe Festtage!
                 </h2>
               </GridTwo>
               <GridThree>
