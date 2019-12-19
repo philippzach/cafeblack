@@ -1,12 +1,12 @@
 require('dotenv').config({
-  path: `.env`,
-})
+  path: `.env`
+});
 
-const prismicHtmlSerializer = require('./src/gatsby/htmlSerializer')
+const prismicHtmlSerializer = require('./src/gatsby/htmlSerializer');
 
-const website = require('./config/website')
+const website = require('./config/website');
 
-const pathPrefix = website.pathPrefix === '/' ? '' : website.pathPrefix
+const pathPrefix = website.pathPrefix === '/' ? '' : website.pathPrefix;
 
 module.exports = {
   /* General Information */
@@ -23,7 +23,7 @@ module.exports = {
     ogLanguage: website.ogLanguage,
     author: website.author,
     twitter: website.twitter,
-    facebook: website.facebook,
+    facebook: website.facebook
   },
   /* Plugins */
   plugins: [
@@ -39,9 +39,9 @@ module.exports = {
         // Get the correct URLs in blog posts
         linkResolver: () => post => `/${post.uid}`,
         // PrismJS highlighting for labels and slices
-        htmlSerializer: () => prismicHtmlSerializer,
+        htmlSerializer: () => prismicHtmlSerializer
         // Remove this config option if you only have one language in your Prismic repository
-      },
+      }
     },
     'gatsby-plugin-lodash',
     'gatsby-transformer-sharp',
@@ -49,8 +49,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-typography',
       options: {
-        pathToConfigModule: 'config/typography.js',
-      },
+        pathToConfigModule: 'config/typography.js'
+      }
     },
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
@@ -58,22 +58,22 @@ module.exports = {
         fonts: [
           {
             family: `Roboto`,
-            variants: [`400`],
-          },
-        ],
-      },
+            variants: [`400`]
+          }
+        ]
+      }
     },
     {
       resolve: `gatsby-plugin-facebook-pixel`,
       options: {
-        pixelId: website.fbPixelID,
-      },
+        pixelId: website.fbPixelID
+      }
     },
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: website.googleAnalyticsID,
-      },
+        trackingId: website.googleAnalyticsID
+      }
     },
     'gatsby-plugin-sitemap',
     {
@@ -86,11 +86,11 @@ module.exports = {
         background_color: website.backgroundColor,
         theme_color: website.themeColor,
         display: 'standalone',
-        icon: website.favicon,
-      },
+        icon: website.favicon
+      }
     },
     // Must be placed at the end
-    // 'gatsby-plugin-offline',
-    'gatsby-plugin-netlify',
-  ],
-}
+    'gatsby-plugin-offline',
+    'gatsby-plugin-netlify'
+  ]
+};

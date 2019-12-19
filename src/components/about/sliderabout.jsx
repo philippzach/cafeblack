@@ -37,6 +37,7 @@ class SimpleSlider extends React.Component {
           autoPlay
           fadeOutAnimation
           mouseTrackingEnabled
+          stopAutoPlayOnHover={false}
           playButtonEnabled={false}
           buttonsDisabled
           onSlideChange={this.onSlideChange}

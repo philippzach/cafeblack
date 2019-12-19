@@ -20,76 +20,6 @@ import KartenDesktop from '../components/karten-600-desktop';
 import NavigationMobile from '../components/navigationmobile';
 import Headline from '../components/headline';
 
-/* const Hero = styled.header`
-  display: flex;
-  align-items: center;
-`;
-
-const HeroInner = styled(Wrapper)`
-  padding-top: 13rem;
-  padding-bottom: 13rem;
-  h1 {
-    margin-bottom: 2rem;
-  }
-  @media (max-width: ${props => props.theme.breakpoints.l}) {
-    padding-top: 10rem;
-    padding-bottom: 10rem;
-  }
-  @media (max-width: ${props => props.theme.breakpoints.m}) {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-  }
-  @media (max-width: ${props => props.theme.breakpoints.s}) {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-  }
-`;
-
-const HeroText = styled.div`
-  font-size: 1.7rem;
-  line-height: 1.4;
-  margin-bottom: 2rem;
-  @media (max-width: ${props => props.theme.breakpoints.m}) {
-    font-size: 1.4rem;
-  }
-  @media (max-width: ${props => props.theme.breakpoints.s}) {
-    font-size: 1.25rem;
-  }
-`;
-
-const Social = styled.ul`
-  list-style-type: none;
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: 0;
-  font-family: 'Source Sans Pro', -apple-system, 'BlinkMacSystemFont',
-    'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol';
-  li {
-    display: inline;
-    &:not([data-name='social-entry-0']) {
-      margin-left: 2.5rem;
-      @media (max-width: ${props => props.theme.breakpoints.s}) {
-        margin-left: 1.75rem;
-      }
-    }
-    a {
-      font-style: normal;
-      color: ${props => props.theme.colors.greyDark};
-      font-size: 1.333rem;
-      font-weight: 600;
-      &:hover,
-      &:focus {
-        color: ${props => props.theme.colors.primary};
-        text-decoration: none;
-      }
-      @media (max-width: ${props => props.theme.breakpoints.s}) {
-        font-size: 1.2rem;
-      }
-    }
-  }
-`; */
-
 const HeaderContainer = styled.div`
   width: 100%;
   height: 750px;
@@ -114,12 +44,24 @@ const InsideGrid = styled.div`
   @media screen and (min-width: 650px) {
     width: 60%;
     left: 40%;
-    top: 60%;
+    top: 65%;
     transform: translate(-50%, -220%);
   }
   @media screen and (min-width: 1350px) {
     left: 50%;
     top: 50%;
+  }
+  @media screen and (min-width: 1550px) {
+    left: 50%;
+    top: 40%;
+  }
+  @media screen and (min-width: 1750px) {
+    left: 50%;
+    top: 20%;
+  }
+  @media screen and (min-width: 1999px) {
+    left: 50%;
+    top: 15%;
   }
 `;
 
@@ -234,7 +176,6 @@ class Index extends Component {
           <Deski>
             <Navigation />
           </Deski>
-
           <Img
             style={{ minHeight: '750px', zIndex: '-1' }}
             fluid={headerimage.data.headerimg.localFile.childImageSharp.fluid}
@@ -251,9 +192,9 @@ class Index extends Component {
                   <g
                     id='Page-1'
                     stroke='none'
-                    stroke-width='1'
+                    strokeWidth='1'
                     fill='none'
-                    fill-rule='evenodd'
+                    fillRule='evenodd'
                   >
                     <g
                       id='Cafe-Black-Large-Desktop-'
@@ -270,9 +211,11 @@ class Index extends Component {
                 </svg>
               </GridOne>
               <GridTwo>
-                {/* <h2 className="plusafter">{kontakt.data.title.text}</h2>
-                <h2>{kontakt.data.strasse.text}</h2>
-                <h2>{kontakt.data.plz.text}</h2> */}
+                <h2>
+                  Von 25.12.19 bis 05.01.19 Weihnachtsferien
+                  <br />
+                  Wir wünschen Ihnen frohe Feiertage!
+                </h2>
               </GridTwo>
               <GridThree>
                 <h2>Öffnungszeiten</h2>
@@ -294,17 +237,6 @@ class Index extends Component {
             </InsideGrid>
           </GridBox>
         </HeaderContainer>
-
-        {/*     <HeroInner>
-          <Social>
-            {social.nodes.map((s, index) => (
-              <li data-name={`social-entry-${index}`} key={s.primary.label.text}>
-                <a href={s.primary.link.url}>{s.primary.label.text}</a>
-              </li>
-            ))}
-          </Social>
-        </HeroInner> */}
-
         <Top text={texts.data} image={toppicture.data} m />
         <Media>
           {({ breakpoints, currentBreakpoint }) =>
