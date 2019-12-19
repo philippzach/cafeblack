@@ -26,7 +26,7 @@ const Span = styled.span`
 const Container = styled.div`
   /* margin-bottom: 8em; */
   background-image: url(${Background});
-  background-repeat: no-repeat;
+  background-repeat: repeat;
 `;
 const CustomLink = styled.a`
   color: rgb(28, 37, 43);
@@ -57,7 +57,7 @@ const Kontakt = ({ data }) => (
   <Container>
     <Wrapper>
       <Grid>
-        <div>
+        <div className='kontakt-left'>
           <Paragraph>Adresse</Paragraph>
           <Span>{data.title.text}</Span>
           <Span>{data.strasse.text}</Span>
@@ -100,7 +100,7 @@ const Kontakt = ({ data }) => (
             LinkedIn
           </Social>
         </div>
-        <div>
+        <div className='kontakt-left'>
           <Paragraph>Kontakt</Paragraph>
           <CustomLink href={`mailto:${data.email.text}`}>
             <Span style={{ textDecoration: 'underline' }}>

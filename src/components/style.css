@@ -128,3 +128,8 @@ a.maplink {
 a.maplink:hover .mapcontainer {
   transform: translateY(0.33em);
 }
+@media (max-width: 450px) {
+  .kontakt-left {
+    text-align: left;
+  }
+}
