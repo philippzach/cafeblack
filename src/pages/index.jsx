@@ -211,20 +211,20 @@ class Index extends Component {
                 </svg>
               </GridOne>
               <GridTwo>
-                <h2>
+                {/* <h2>
                   25.12.19 bis 05.01.20 Weihnachtsferien
                   <br />
                   Wir wünschen Ihnen frohe Festtage!
-                </h2>
+                </h2> */}
               </GridTwo>
               <GridThree>
                 <h2>Öffnungszeiten</h2>
                 <h2>
                   {kontakt.data.tage.text} | {kontakt.data.zeit.text}
                 </h2>
-                <h2>
+                {/*   <h2>
                   {kontakt.data.dateextra.text} | {kontakt.data.timeextra.text}
-                </h2>
+                </h2> */}
               </GridThree>
               <GridFour>
                 <CustomLink href={`mailto:${kontakt.data.email.text}`}>
