@@ -113,6 +113,14 @@
     background-color: darkgray;
   }
 }
+.exitsvg {
+  width: 20px;
+  cursor: pointer;
+}
+.exitsvg:hover {
+  opacity: 0.5;
+  animation: 0.5s ease-in-out;
+}
 .tab:active {
   background-color: #1e1e1e;
   color: white;
@@ -132,4 +140,16 @@ a.maplink:hover .mapcontainer {
   .kontakt-left {
     text-align: left;
   }
+}
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 1000ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
 }

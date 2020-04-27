@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import ReactModal from 'react-modal';
 
 import styled from '@emotion/styled';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import { Media } from 'react-breakpoints';
+import Popup from '../components/popup';
+import PopupMobile from '../components/popupmobile';
 import { Layout, Wrapper, Title } from '../components';
 import website from '../../config/website';
 
@@ -34,6 +37,7 @@ const InsideGrid = styled.div`
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto;
+
   @media screen and (max-width: 649px) {
     top: -70%;
     width: 95%;
@@ -149,10 +153,38 @@ const Mobi = styled.header`
     display: none;
   }
 `;
+const Exit = styled.div`
+  display: flex;
+  justify-content: flex-end;
+`;
+
 class Index extends Component {
+  constructor() {
+    super();
+    this.state = {
+      showModal: false,
+    };
+
+    this.handleOpenModal = this.handleOpenModal.bind(this);
+    this.handleCloseModal = this.handleCloseModal.bind(this);
+  }
+
+  handleOpenModal() {
+    this.setState({ showModal: true });
+  }
+
+  handleCloseModal() {
+    this.setState({ showModal: false });
+  }
+
+  componentWillMount() {
+    this.setState({ showModal: this.props.data.popup.data.showpopup });
+  }
+
   render() {
     const {
       data: {
+        popup,
         homepage,
         social,
         karten,
@@ -163,12 +195,33 @@ class Index extends Component {
         toppicture,
         headerimage,
         breakpoints,
-        currentBreakpoint
-      }
+        currentBreakpoint,
+      },
     } = this.props;
 
     return (
       <Layout>
+        <ReactModal
+          isOpen={this.state.showModal}
+          contentLabel='Minimal Modal Example'
+          style={{
+            overlay: {
+              zIndex: '1000',
+            },
+          }}
+        >
+          <Exit onClick={this.handleCloseModal}>
+            <svg className='exitsvg' viewBox='0 0 847 1058'>
+              <path d='M423.114,395.503l269.343,-269.343c79.461,-79.462 199.169,41.278 119.708,120.74l-268.311,268.311l268.311,269.343c79.461,79.462 -40.247,199.17 -119.708,119.708l-269.343,-268.311l-268.312,268.311c-79.461,79.462 -200.201,-40.246 -120.74,-119.708l269.344,-269.343l-269.344,-268.311c-79.461,-79.462 41.279,-200.202 120.74,-120.74l268.312,269.343Z' />
+            </svg>
+          </Exit>
+          <Deski>
+            <Popup data={popup} />
+          </Deski>
+          <Mobi>
+            <PopupMobile data={popup} />
+          </Mobi>
+        </ReactModal>
         <HeaderContainer>
           <Mobi>
             <NavigationMobile />
@@ -265,6 +318,17 @@ export default Index;
 
 export const pageQuery = graphql`
   query IndexQuery {
+    popup: prismicPopup {
+      data {
+        showpopup
+        text {
+          html
+        }
+        menu {
+          url
+        }
+      }
+    }
     homepage: prismicHomepage {
       data {
         title {
