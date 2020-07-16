@@ -65,7 +65,9 @@ const NavigationDesk = () => (
         <li>
           <a href='#about'>Über uns</a>
         </li>
-
+        <li>
+          <a href='#terrasse'>Terrasse</a>
+        </li>
         <li>
           <a href='#events'>Events</a>
         </li>

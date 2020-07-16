@@ -14,6 +14,7 @@ import About from '../components/about/index';
 import Events from '../components/events';
 import Kontakt from '../components/kontakt';
 import Top from '../components/top';
+import Terrasse from '../components/terrasse';
 import Navigation from '../components/navigation';
 
 import Subscribe from '../components/subscribe';
@@ -189,6 +190,7 @@ class Index extends Component {
         social,
         karten,
         texts,
+        terrasse,
         sliderabout,
         eventimg,
         kontakt,
@@ -275,9 +277,9 @@ class Index extends Component {
                 <h2>
                   {kontakt.data.tage.text} | {kontakt.data.zeit.text}
                 </h2>
-                {/*   <h2>
+                <h2>
                   {kontakt.data.dateextra.text} | {kontakt.data.timeextra.text}
-                </h2> */}
+                </h2>
               </GridThree>
               <GridFour>
                 <CustomLink href={`mailto:${kontakt.data.email.text}`}>
@@ -290,7 +292,7 @@ class Index extends Component {
             </InsideGrid>
           </GridBox>
         </HeaderContainer>
-        <Top text={texts.data} image={toppicture.data} m />
+        <Top text={texts.data} image={toppicture.data} />
         <Media>
           {({ breakpoints, currentBreakpoint }) =>
             breakpoints[currentBreakpoint] < breakpoints.tablet ? (
@@ -303,7 +305,9 @@ class Index extends Component {
         <div style={{ padding: '1.5em 0' }} />
         <Headline color='#E3CFC9' headline='Über Uns' idlink='about' />
         <About data={sliderabout.data.body} aboutText={texts.data} />
-
+        <Headline color='#c9d2e3' headline='Terrasse' idlink='terrasse' />
+        <Terrasse text={terrasse.data} image={terrasse.data} />
+        <div style={{ padding: '1.5em 0' }} />
         <Headline color='#DED7C1' headline='Events' idlink='events' />
         <Events eventText={texts.data} image={eventimg.data} />
         <Subscribe />
@@ -318,6 +322,40 @@ export default Index;
 
 export const pageQuery = graphql`
   query IndexQuery {
+    terrasse: prismicTerrasse {
+      data {
+        text {
+          text
+        }
+        image1 {
+          localFile {
+            childImageSharp {
+              fluid(maxWidth: 1200, quality: 100) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
+        }
+        image2 {
+          localFile {
+            childImageSharp {
+              fluid(maxWidth: 1200, quality: 100) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
+        }
+        image3 {
+          localFile {
+            childImageSharp {
+              fluid(maxWidth: 1200, quality: 100) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
+        }
+      }
+    }
     popup: prismicPopup {
       data {
         showpopup

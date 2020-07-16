@@ -68,8 +68,8 @@ const Kontakt = ({ data }) => (
           <Paragraph>Öffnungszeiten</Paragraph>
           <Span>{data.tage.text}</Span>
           <Span>{data.zeit.text}</Span>
-          {/* <Span>{data.dateextra.text}</Span>
-          <Span>{data.timeextra.text}</Span> */}
+          <Span>{data.dateextra.text}</Span>
+          <Span>{data.timeextra.text}</Span>
           <div />
           <Social
             target='_blank'
