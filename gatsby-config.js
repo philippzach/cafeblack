@@ -52,7 +52,7 @@ module.exports = {
         pathToConfigModule: 'config/typography.js'
       }
     },
-    {
+    /* {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
@@ -62,7 +62,7 @@ module.exports = {
           }
         ]
       }
-    },
+    }, */
     {
       resolve: `gatsby-plugin-facebook-pixel`,
       options: {
